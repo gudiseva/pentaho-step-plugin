@@ -15,9 +15,9 @@
         <category locale="en_US">Input</category>
     </localized_category>
     <localized_description>
-        <description locale="en_US">Sample Plug-In</description>
+        <description locale="en_US">Step Plugin</description>
     </localized_description>
     <localized_tooltip>
-        <tooltip locale="en_US">This plug-in allows adding New String Field into the stream</tooltip>
+        <tooltip locale="en_US">This plugin allows adding New String Field into the Stream</tooltip>
     </localized_tooltip>
 </plugin>
