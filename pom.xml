@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>nag.arvind.gudiseva</groupId>
+    <artifactId>pentaho-step-plugin</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <kettle.version>7.0.0.5-89</kettle.version>
+    </properties>
+
+    <repositories>
+        <!-- Please use eclipse first in order to m2e plugin can download the sources
+            and inside eclipse you can see the SWT's javadoc -->
+        <repository>
+            <id>eclipse</id>
+            <url>http://maven-eclipse.github.io/maven</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+
+        <repository>
+            <id>pentaho-repo</id>
+            <name>pentaho-repo</name>
+            <url>https://public.nexus.pentaho.org/content/groups/omni/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.pentaho</groupId>
+            <artifactId>pdi-step-plugin-archetype</artifactId>
+            <version>2.20</version>
+        </dependency>
+    </dependencies>
+
+    <profiles>
+        <profile>
+            <id>windows</id>
+            <activation>
+                <os>
+                    <family>windows</family>
+                </os>
+            </activation>
+            <dependencies>
+                <dependency>
+                    <groupId>org.eclipse.swt</groupId>
+                    <artifactId>org.eclipse.swt.win32.win32.x86_64</artifactId>
+                    <version>4.6</version>
+                    <scope>provided</scope>
+                </dependency>
+
+                <dependency>
+                    <groupId>pentaho-kettle</groupId>
+                    <artifactId>kettle-ui-swt</artifactId>
+                    <version>${kettle.version}</version>
+                    <scope>provided</scope>
+                    <exclusions>
+                        <exclusion>
+                            <groupId>org.eclipse.swt</groupId>
+                            <artifactId>org.eclipse.swt.gtk.linux.x86_64</artifactId>
+                        </exclusion>
+                    </exclusions>
+                </dependency>
+            </dependencies>
+        </profile>
+        <profile>
+            <id>linux</id>
+            <activation>
+                <os>
+                    <family>linux</family>
+                </os>
+            </activation>
+            <dependencies>
+                <dependency>
+                    <groupId>pentaho-kettle</groupId>
+                    <artifactId>kettle-ui-swt</artifactId>
+                    <version>${kettle.version}</version>
+                    <scope>provided</scope>
+                </dependency>
+            </dependencies>
+        </profile>
+
+    </profiles>
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <descriptors>
+                        <descriptor>src/main/assembly/bin.xml</descriptor>
+                    </descriptors>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>pentaho-repo</id>
+            <name>pentaho-repo</name>
+            <url>https://public.nexus.pentaho.org/content/groups/omni/</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+</project>

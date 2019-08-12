@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin
+        id="pentaho-step-plugin"
+        iconfile="logo.png"
+        description="pentaho-step-plugin"
+        tooltip="This plugin allows adding New String Field into the stream"
+        category="Input"
+        classname="nag.arvind.gudiseva.plugins.StepPlugInMeta">
+
+    <libraries>
+        <library name="pentaho-step-plugin-1.0-SNAPSHOT.jar"/>
+    </libraries>
+
+    <localized_category>
+        <category locale="en_US">Input</category>
+    </localized_category>
+    <localized_description>
+        <description locale="en_US">Sample Plug-In</description>
+    </localized_description>
+    <localized_tooltip>
+        <tooltip locale="en_US">This plug-in allows adding New String Field into the stream</tooltip>
+    </localized_tooltip>
+</plugin>
