@@ -7,11 +7,14 @@
 
 ## References:
 
-### Pentaho Data Integration – Writing Custom Step Plug-Inpentaho
+### Pentaho Data Integration – Writing Custom Step Plugin
 https://www.sigmainfo.net/pentaho-data-integration-kettle-writing-custom-step-plug-inextension-point/
 
-### Pentaho Community Edition Java Project Archetype
+### Pentaho Community Edition - Java Project Archetype
 https://javalibs.com/archetype/org.pentaho/pdi-step-plugin-archetype
+
+### Logos used in the Plugin
+https://www.flaticon.com/free-icon/internet_181526
 
 ## Building the Project
 
