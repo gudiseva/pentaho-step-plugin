@@ -60,7 +60,7 @@ public class StepPlugInMeta extends BaseStepMeta implements StepMetaInterface {
 
     @Override
     public void setDefault() {
-// TODO Auto-generated method stub
+        // TODO Auto-generated method stub
     }
 
     public void loadXML(Node stepnode, List<DatabaseMeta> databases, Map<String, Counter> counters)
@@ -69,8 +69,7 @@ public class StepPlugInMeta extends BaseStepMeta implements StepMetaInterface {
         try {
             newField = XMLHandler.getTagValue(stepnode,"NEWFIELD");
         } catch (Exception e) {
-            throw new KettleXMLException("Load XML: Excption ", e);// Messages.getString(“KafkaTopicPartitionConsumerMeta.Exception.loadXml”),
-// e);
+            throw new KettleXMLException("Load XML: Excption ", e); // Messages.getString("KafkaTopicPartitionConsumerMeta.Exception.loadXml"), e);
         }
     }
 

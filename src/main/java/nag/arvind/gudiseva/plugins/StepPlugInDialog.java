@@ -58,14 +58,14 @@ public class StepPlugInDialog extends BaseStepDialog implements StepDialogInterf
         formLayout.marginHeight = Const.FORM_MARGIN;
 
         shell.setLayout(formLayout);
-        shell.setText("Step Plugin");// Messages.getString(“KafkaTopicPartitionConsumerDialog.Shell.Title”));
+        shell.setText("Step Plugin"); // Messages.getString("KafkaTopicPartitionConsumerDialog.Shell.Title"));
 
         int middle = props.getMiddlePct();
         int margin = Const.MARGIN;
 
         // Step name
         wlStepname = new Label(shell, SWT.RIGHT);
-        wlStepname.setText("Step Name");// Messages.getString(“KafkaTopicPartitionConsumerDialog.StepName.Label”));
+        wlStepname.setText("Step Name"); // Messages.getString("KafkaTopicPartitionConsumerDialog.StepName.Label"));
         props.setLook(wlStepname);
         fdlStepname = new FormData();
         fdlStepname.left = new FormAttachment(0, 0);
@@ -83,7 +83,7 @@ public class StepPlugInDialog extends BaseStepDialog implements StepDialogInterf
         Control lastWidget = wStepname;
 
         Label wlnewField = new Label(shell, SWT.RIGHT);
-        wlnewField.setText("New Field[Type:String]");// Messages.getString(“KafkaTopicPartitionConsumerDialog.TopicName.Label”));
+        wlnewField.setText("New Field [Type:String]"); // Messages.getString("KafkaTopicPartitionConsumerDialog.TopicName.Label"));
         props.setLook(wlnewField);
         FormData fdlnewField = new FormData();
         fdlnewField.top = new FormAttachment(lastWidget, margin);
@@ -100,7 +100,7 @@ public class StepPlugInDialog extends BaseStepDialog implements StepDialogInterf
         wnewField.setLayoutData(fdnewField);
         lastWidget = wnewField;
 
-// Buttons
+        // Buttons
         wOK = new Button(shell, SWT.PUSH);
         wOK.setText(BaseMessages.getString("System.Button.OK")); //$NON-NLS-1$
         wCancel = new Button(shell, SWT.PUSH);
@@ -162,7 +162,7 @@ public class StepPlugInDialog extends BaseStepDialog implements StepDialogInterf
  * Copy information from the meta-data input to the dialog fields.
  */
     /**
-     * @param consumerMeta
+     * @param stepPlugInMeta
      * @param copyStepname
      */
     private void getData(StepPlugInMeta stepPlugInMeta, boolean copyStepname) {
