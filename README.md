@@ -24,3 +24,4 @@ C:\> mvn clean assembly:assembly
 
 ### Installation:
 Unzip the file under PENTAHO_HOME/data-integration/plugins/steps/pentaho-step-plugin folder.
+(Refer Screenprints for details)
